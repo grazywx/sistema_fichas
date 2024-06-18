@@ -1,15 +1,16 @@
 <?php
     if (isset($_POST['submit'])) {
-        if (isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['senha']) && !empty($_POST['senha']) && isset($_POST['email']) && !empty($_POST['email'])) {
+       
+        if (isset($_POST['senha']) && !empty($_POST['senha']) && isset($_POST['email']) && !empty($_POST['email'])) {
             session_start();
             require '../conexao.php';
-            $nome = $_POST['nome'];
+            
             $senha = $_POST['senha'];
             $email = $_POST['email'];
             
-            $sql = "SELECT * FROM users WHERE nome = :nome AND senha = :senha AND email = :email";
+            $sql = "SELECT * FROM users WHERE  senha = :senha AND email = :email";
             $resultado = $conexao->prepare($sql);
-            $resultado->bindValue(":nome", $nome); 
+             
             $resultado->bindValue(":senha", $senha); 
             $resultado->bindValue(":email", $email);
             

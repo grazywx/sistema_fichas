@@ -45,6 +45,8 @@
                                                 endif;
                                             ?>
 
+                                                                        
+
                                             <div class="form-outline mb-4">
                                                 <label class="form-label" for="form2Example17">Endereço de E-mail<span class="text-danger">*</span></label>
                                                 <input name="email" type="email" class="form-control form-control-lg" required>
